@@ -1,0 +1,91 @@
+html, body, #root{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header{
+  height: 80%;
+  background: #000;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+header::before{
+  content: '';
+  border-radius: 50%;
+  height: 30px;
+
+}
+
+.input_box{
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  width: 100%;
+  max-width: 512px;
+  margin: 0 15px;
+}
+.input_box input{
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 100;
+}
+.input_box button{
+  background: #000;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  /* width: 30px; */
+  height: 40px;
+  color: #fff;
+  border-radius: 7px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.input_box button:disabled{
+  background: rgb(47, 47, 47);
+}
+.result_box{
+  margin: 0 auto 40px ;
+  padding: 15px;
+  height: 150px;
+  text-align: center;
+}
+.result_box h2 {
+  font-size: 90px;
+}
+.result_box *{
+  margin: 0px;
+}
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
