@@ -1,0 +1,19 @@
+service: nodejs-nlp
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  lambdaHashingVersion: 20201221
+
+functions:
+  app:
+    handler: ./lambda.handler
+    events:
+      - http: 
+          method: any
+          path: /
+      - http:
+          method: any
+          path: /{any+}
